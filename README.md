@@ -9,7 +9,7 @@ We explored a variety of user interface options. These ranged from a simple loca
 
 The DASH frameworks allow a user to create a web application with Python, and provides a user ample documentation to make a basic UI with graphs, inputs, sliders and charts. Its comprehensive documentation advocates separating the app into two components: the layout and the functions that process inputs and outputs. It is a popular framework for Data Scientists to show their work.
  
-####Trip Planner Application
+#### Trip Planner Application
 
 The trip planner application follows the two component DASH structure closely. It comprises a layout that receives trip and recommender parameters, and outputs recommended trips. The layout also includes a Google Map rendering of the highest rated route sequence. The second component comprises the code that processes the input parameters, Mountain Project data and then compiles recommended sequences for the output. It also creates the Google Maps rendering API calls. The application includes two python scripts: **app.py** and **trip_route_planner.py**.
 
