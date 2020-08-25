@@ -1,6 +1,10 @@
 # Rock Climbing Mult-Route Trip Planner
 
-The web application is hosted here: https://climbing-trip-planner.herokuapp.com/
+A 'lite' web hosted version of the application is hosted here: https://climbing-trip-planner.herokuapp.com/
+
+The web version, as hosted here on Github, is considered 'lite' for the following reasons:
+
+The repo and web application make access the Google API key public, and so access will be restricted for security reasons. Additionally Github repo's have file size constraints, and for that reason, the KNN Recommender is not included in the Github. This means that unless a given set of parameters using the KNN have already been cached, only the MF recommender will generate new results.
 
 Table of Contents
 =================
