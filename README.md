@@ -23,21 +23,23 @@ The primary function is **trip_planner**. This function ultimately calls all oth
 
 Within **trip_planner**, there are several other functions: **best_route** and **add_multi_routes**. The function also imports the selected recommender as a pickle, and will execute the recommender function on waypoint and destination routes. Functions indirectly called include get_route_coords, haversine and get_distance_duration.
 
-The **trip_planner** function accepts Mountain Project user ID, maximum time travelling (excursion length), preferred maximum number of routes and the selected recommender model. The function finds optimal multi-route sequences. It begins calling **best_route** to find the highest recommended route (the ‘seed route’) for a user.
+**trip_planner**: accepts Mountain Project user ID, maximum time travelling (excursion length), preferred maximum number of routes and the selected recommender model. The function finds optimal multi-route sequences. It begins calling **best_route** to find the highest recommended route (the ‘seed route’) for a user.
 
 After the function determines the seed route, the function executes add_multi_routes to build a sequence table of multiple rock climbing routes. The function then reruns the recommender on each climbing route ID in each sequence and begins building the Score Table. Details on the scoring criteria are provided in the methods section.
 
-The **best_route** function accepts recommender file path and Mountain Project user ID. It returns the highest recommended route for the given user.
+**best_route**: accepts recommender file path and Mountain Project user ID. It returns the highest recommended route for the given user.
 
-The **add_multi_routes** function accepts maximum excursion length, seed route ID and maximum routes. It compiles all the trip options that ultimately create the scoring table, but does not yet include the scores.
+**add_multi_routes**: accepts maximum excursion length, seed route ID and maximum routes. It compiles all the trip options that ultimately create the scoring table, but does not yet include the scores.
+
 This function calls **get_route_coords** to calculate the coordinates for the seed route. It then loops through the mountain project routes data to find routes that fit the given criteria. Each subsequent route is either added as an additional sequence permutation and included in the trip option table, or passed as failing for failing the given criteria.
+
 Each loop calls the haversine function to screen out unreasonably distant routes, and then uses **get_distance_duration** to receive distance and travel duration from the Distance Matrix API between each route in the currently accumulating sequence.
 
-The **get_route_coords** function accepts two items, a route ID and Mountain Project set reference. It looks up the route ID and returns the latitude and longitude of the route location. The function is used in **add_multi_routes**.
+**get_route_coords**: accepts two items, a route ID and Mountain Project set reference. It looks up the route ID and returns the latitude and longitude of the route location. The function is used in **add_multi_routes**.
 
-The **haversine** function accepts a pair of origin and destination GPS coordinates. The function finds the ‘haversine’ distance between the two points and is executed in add_multi_routes. With the Earth considered a sphere, the haversine function finds the surface distance between the coordinates. Effectively this finds the raw distance between the two points mathematically. The haversine distance function lacks the nuance required to provide navigable directions, but executes with high efficiency. Additionally, the function quickly filters out unreasonably distant routes from the result set, and also reduces volume on the Distance Matrix API.
+**haversine**: accepts a pair of origin and destination GPS coordinates. The function finds the ‘haversine’ distance between the two points and is executed in add_multi_routes. With the Earth considered a sphere, the haversine function finds the surface distance between the coordinates. Effectively this finds the raw distance between the two points mathematically. The haversine distance function lacks the nuance required to provide navigable directions, but executes with high efficiency. Additionally, the function quickly filters out unreasonably distant routes from the result set, and also reduces volume on the Distance Matrix API.
 
-The **get_distance_duratio**n function accepts a pair of origin and destination GPS coordinates and the transit mode. It calls and returns data from the Google Maps Distance Matrix API. Data returned includes coordinate distance and travel duration.
+**get_distance_duratio**: accepts a pair of origin and destination GPS coordinates and the transit mode. It calls and returns data from the Google Maps Distance Matrix API. Data returned includes coordinate distance and travel duration.
  
 #### Scoring Table Criteria
 
