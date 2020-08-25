@@ -7,7 +7,7 @@ import pickle
 import googlemaps
 #from itertools import tee
 from math import radians, cos, sin, asin, sqrt
-import time
+#import time
 
 
 ##Google Maps API information
@@ -107,7 +107,7 @@ def best_route(pickle_path,user_id):
 
 def add_multi_routes(excursion_length, seed_route, max_routes=10):
     'Builds and creates table of multi-route trip sequences.'
-    t0 = time.time()
+   # t0 = time.time()
     seed_route_lat, seed_route_long = get_route_coords(seed_route, reduced_cleaned_routes)
     origins = seed_route_lat,seed_route_long
 
@@ -207,8 +207,8 @@ def trip_planner(user_id, excursion_length, max_routes,selected_recommender):
 
     trip_options = add_multi_routes(excursion_length, route_id, max_routes)
     
-    t1 = time.time() - t0
-    print("Time Elapsed, route combos added: ", t1)
+   # t1 = time.time() - t0
+    #print("Time Elapsed, route combos added: ", t1)
     
     #create score table 
     score_table, all_routes = trip_options
@@ -241,8 +241,8 @@ def trip_planner(user_id, excursion_length, max_routes,selected_recommender):
                     #add score bonus for being under max length
                     score_table.loc[idx,'total_score'] = row['total_score'] + (excursion_length - row['total_trip_length'])*1.1
 
-    t2 = time.time() - t0
-    print("Time Elapsed: return score table ", t2)
+    #t2 = time.time() - t0
+    #print("Time Elapsed: return score table ", t2)
     
     score_table.to_csv('./data/%d_%d_%d_%s_%s_score_table.csv' % (user_id, excursion_length, max_routes,pp,mode))
     return score_table
