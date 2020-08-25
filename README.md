@@ -62,3 +62,20 @@ The Distance Matrix API accepts location data (typically in the form of coordina
 The other Maps API incorporated is the Maps Embed API directions service. The directions service accepts the same inputs as the Distance Matrix API, but returns an iFrame Map rendering of the route for javascript-less integration into web pages. The map rendering can be enlarged to view standard Google Maps features, such as place information and satellite images of the routes.
 
 A limitation to the API results in some instances where the Maps Embed API and the Distance Matrix API do not return equivalent distance and travel times with identical input coordinates and transit parameters. It seems that the Embed API rendering avoids returning hybrid walking/driving directions. This limitation is problematic as rock climbers often must access rarely traversed walking paths to arrive at a climbing route site. On the other hand, the Distance Matrix may be providing more precise walking/driving hybrid directions, but this remains unconfirmed as one cannot see waypoint additions in the API’s return data.
+
+### References
+
+##### Climba Application Github: https://github.com/backslash451/Climba#version-history
+
+##### DASH source:
+https://www.tutorialspoint.com/python_web_development_libraries/python_web_development_libraries_dash_framework.htm#:~:text=Dash%20is%20an%20open%2Dsource,very%20familiar%20with%20web%20development.
+ 
+##### Haversine distance:
+ 
+https://en.wikipedia.org/wiki/Haversine_formula#:~:text=The%20haversine%20formula%20determines%20the,and%20angles%20of%20spherical%20triangles.
+ 
+https://stackoverflow.com/questions/4913349/haversine-formula-in-python-bearing-and-distance-between-two-gps-points
+
+##### Google Maps APIs: 
+https://developers.google.com/maps/apis-by-platform
+
