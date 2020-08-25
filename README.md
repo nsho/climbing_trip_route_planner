@@ -1,5 +1,15 @@
 # Rock Climbing Mult-Route Trip Planner
 
+Table of Contents
+=================
+* [Composite Trip Planner](#composite-trip-planner)
+     * [User Interface: DASH Framework](#user-interface-dash-framework)
+     * [Trip Planner Application](#trip-planner-application)
+     * [Planner Application Functions](#planner-application-functions)
+     * [Scoring Table Criteria](#scoring-table-criteria)
+* [Google Maps API Overview](#google-maps-api-overview)
+* [References](#references)
+     * [Climba Application Github: <a href="https://github.com/backslash451/Climba#version-history">https://github.com/backslash451/Climba#version-history</a>](#climba-application-github-httpsgithubcombackslash451climbaversion-history)
 
 ### Composite Trip Planner
 The project builds upon recommender systems, and creates a multi-route rock climbing trip planner application. The trip-planner incorporates my project partner's recommender model work for scoring individual routes, and seeks to optimize a multi-route trip for a user. The user can visit the application in a web browser, select a recommender method, excursion length, travel mode and the maximum number of routes.
