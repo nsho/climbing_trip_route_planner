@@ -1,5 +1,7 @@
 # Rock Climbing Mult-Route Trip Planner
 
+The web application is hosted here: https://climbing-trip-planner.herokuapp.com/
+
 Table of Contents
 =================
 * [Composite Trip Planner](#composite-trip-planner)
