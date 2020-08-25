@@ -18,7 +18,7 @@ from os import path
 external_scripts = ['https://polyfill.io/v3/polyfill.min.js?features=default', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDpi3ouWiwr7SeDtT3nyFgIdsxOWpyw4Ic&callback=initMap&libraries=&v=weekly']
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-
+server = app.server
 # Load Up a Recommender
 #recommender = rec.SurpriseRecommender()
 #recommender.load_recommender('svd')
@@ -123,10 +123,10 @@ app.layout = html.Div(children=[
                     {'label': '10101', 'value': '10101'},
                     {'label': '10102', 'value': '10102'},
                     {'label': '10106', 'value': '10106'},
-                    {'label': '10232', 'value': '10116'},
-                    {'label': '110736595', 'value': '10118'},
-                    {'label': '200176001', 'value': '10121'},
-                    {'label': '107326021', 'value': '10112'}
+                    {'label': '10116', 'value': '10116'},
+                    {'label': '10118', 'value': '10118'},
+                    {'label': '10121', 'value': '10121'},
+                    {'label': '10112', 'value': '10112'}
                 ],
                 value='10106'
             ),
