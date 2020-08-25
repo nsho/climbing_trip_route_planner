@@ -18,7 +18,6 @@ from os import path
 external_scripts = ['https://polyfill.io/v3/polyfill.min.js?features=default', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDpi3ouWiwr7SeDtT3nyFgIdsxOWpyw4Ic&callback=initMap&libraries=&v=weekly']
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-server = app.server
 # Load Up a Recommender
 #recommender = rec.SurpriseRecommender()
 #recommender.load_recommender('svd')
@@ -32,6 +31,7 @@ mode = "driving" #options: driving, walking, transit, bicycle
 #app = dash.Dash(__name__, external_scripts=external_scripts)
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 app.title = 'Climbing Route Trip Planner'
+server = app.server
 ##hardcoded lat longs for testing
 #romeLat = 41.9
 #romeLong = 12.49
