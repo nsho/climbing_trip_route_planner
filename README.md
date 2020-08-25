@@ -2,9 +2,7 @@
 
 A 'lite' web hosted version of the application is hosted here: https://climbing-trip-planner.herokuapp.com/
 
-The web version, as hosted here on Github, is considered 'lite' for the following reasons:
-
-The repo and web application make access the Google API key public, and so access will be restricted for security reasons. Additionally Github repo's have file size constraints, and for that reason, the KNN Recommender is not included in the Github. This means that unless a given set of parameters using the KNN have already been cached, only the MF recommender will generate new results.
+The web version, as hosted here on Github, is considered 'lite' because the repo and web application make access the Google API key public, and so access will is restricted for security reasons. Additionally Github repo's have file size constraints, and for that reason, the KNN Recommender is not included in the Github. This means that unless a given set of parameters using the KNN have already been cached, only the MF recommender will generate new results.
 
 Table of Contents
 =================
@@ -16,7 +14,6 @@ Table of Contents
 * [Google Maps API Overview](#google-maps-api-overview)
 * [Background Literature](#background-literature)
 * [References](#references)
-     * [Climba Application Github: <a href="https://github.com/backslash451/Climba#version-history">https://github.com/backslash451/Climba#version-history</a>](#climba-application-github-httpsgithubcombackslash451climbaversion-history)
 
 ### Composite Trip Planner
 The project builds upon recommender systems, and creates a multi-route rock climbing trip planner application. The trip-planner incorporates my project partner's recommender model work for scoring individual routes, and seeks to optimize a multi-route trip for a user. The user can visit the application in a web browser, select a recommender method, excursion length, travel mode and the maximum number of routes.
